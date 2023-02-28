@@ -6,6 +6,7 @@
             "CluodCastle\\Check\\": "src/"
         }
     },
+    "license": "MIT",
     "authors": [
         {
             "name": "Зорин Алексей",
