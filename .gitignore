@@ -4,3 +4,4 @@ out
 gen
 test.php
 /vendor
+composer.lock
