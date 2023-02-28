@@ -1,0 +1,19 @@
+{
+    "name": "cloud-castle/equifax-check-docks",
+    "version": "1.0",
+    "autoload": {
+        "psr-4": {
+            "CluodCastle\\Check\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Зорин Алексей",
+            "email": "zorinalexey59292@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-bcmath": "*"
+    }
+}

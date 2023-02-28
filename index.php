@@ -1,0 +1,11 @@
+<?php
+
+require_once 'vendor/autoload.php';
+
+use CluodCastle\Check\Snils\Snils;
+use CluodCastle\Check\Inn\Inn;
+
+$inn = new Inn('246001622824');
+$snils = new Snils('02846235860');
+
+var_dump($snils->verify(), $inn->verify());
