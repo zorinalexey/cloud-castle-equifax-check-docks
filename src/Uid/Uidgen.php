@@ -12,7 +12,7 @@ final class Uidgen
 
     public function __construct()
     {
-        $this->uid = preg_replace('~(\w{8})(\w{4})(\w{3})(\w{3})(\w{12})~u', '$1-$2-1$3-'.$this->getSimbol().'$4-$5', md5(uniqid('', true)));
+        $this->uid = preg_replace('~^(\w{8})(\w{4})(\w{3})(\w{3})(\w{12})(.+)?$~u', '$1-$2-1$3-'.$this->getSimbol().'$4-$5', md5(uniqid('', true)));
     }
 
     public function getUid():string

@@ -1,6 +1,6 @@
 {
     "name": "cloud-castle/equifax-check-docks",
-    "version": "2.2",
+    "version": "2.2.1",
     "autoload": {
         "psr-4": {
             "CluodCastle\\Check\\": "src/"
