@@ -1,4 +1,15 @@
-# cloud-castle-equifax-check-docks
+# cloud-castle/equifax-check-docks
+
+Библиотека для проверки ИНН и СНИЛС физ. лиц по требованиям 
+БКИ Эквифакс
+
+
+#### ---------- Рекомендуемый способ установки --------------
+
+composer require cloud-castle/equifax-check-docks
+
+#### -------------------------------------------------
+
 
 # version 1.0
 
