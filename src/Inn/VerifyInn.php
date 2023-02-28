@@ -64,7 +64,10 @@ class VerifyInn
 
     private function init():void
     {
-        $this->currentHash = $this->inn[10].$this->inn[11];
+        $this->currentHash = $this->inn[10];
+        if(isset($this->inn[11])){
+            $this->currentHash .= $this->inn[11];
+        }
         $this->hash .= $this->checkDigit($this->inn, self::$c);
         $this->hash .= $this->checkDigit($this->inn, self::$d);
     }
