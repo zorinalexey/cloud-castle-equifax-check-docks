@@ -21,11 +21,6 @@ class ComposerStaticInitd060e2d89f138531a658e48a2f724ee4
     );
 
     public static $classMap = array (
-        'CluodCastle\\Check\\Inn\\Inn' => __DIR__ . '/../..' . '/src/Inn/Inn.php',
-        'CluodCastle\\Check\\Inn\\VerifyInn' => __DIR__ . '/../..' . '/src/Inn/VerifyInn.php',
-        'CluodCastle\\Check\\Interfaces\\VerifyInterface' => __DIR__ . '/../..' . '/src/Interfaces/VerifyInterface.php',
-        'CluodCastle\\Check\\Snils\\Snils' => __DIR__ . '/../..' . '/src/Snils/Snils.php',
-        'CluodCastle\\Check\\Snils\\VerifySnils' => __DIR__ . '/../..' . '/src/Snils/VerifySnils.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
