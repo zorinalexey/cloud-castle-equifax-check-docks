@@ -56,15 +56,19 @@ class VerifyInn
      */
     private array $inn = [];
 
-    public function __construct(string $inn)
+    public function __construct(?string $inn)
     {
-        $this->inn = str_split($inn);
+        if($inn){
+            $this->inn = str_split($inn);
+        }
         $this->init();
     }
 
     private function init():void
     {
-        $this->currentHash = $this->inn[10];
+        if(isset($this->inn[10])){
+            $this->currentHash = $this->inn[10];
+        }
         if(isset($this->inn[11])){
             $this->currentHash .= $this->inn[11];
         }
@@ -76,7 +80,9 @@ class VerifyInn
     {
         $n = 0;
         foreach ($check as $i => $k) {
-            $n += $k * (int) $inn[$i - 1];
+            if(isset($inn[$i - 1])){
+                $n += $k * (int) $inn[$i - 1];
+            }
         }
         $sum = $n % 11;
         if($sum === 10){

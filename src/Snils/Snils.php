@@ -10,11 +10,13 @@ final class Snils implements VerifyInterface
     private ?string $snils = null;
 
     /**
-     * @param string $number
+     * @param string|null $number
      */
-    public function __construct(string $number)
+    public function __construct(?string $number)
     {
-        $this->snils = preg_replace('~(\D)~u', '', $number);
+        if($number){
+            $this->snils = preg_replace('~(\D)~u', '', $number);
+        }
     }
 
     /**
@@ -24,6 +26,9 @@ final class Snils implements VerifyInterface
     public function verify(): bool
     {
         $verify = new VerifySnils($this->snils);
-        return (int)$verify->hash === (int)$verify->currentHash;
+        if($verify->hash && $verify->currentHash){
+            return (int)$verify->hash === (int)$verify->currentHash;
+        }
+        return false;
     }
 }

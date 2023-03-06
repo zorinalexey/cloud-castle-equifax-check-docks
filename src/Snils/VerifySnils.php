@@ -9,7 +9,7 @@ final class VerifySnils
     public ?string $hash = null;
     private ?string $snils = null;
 
-    public function __construct(string $snils)
+    public function __construct(?string $snils)
     {
         $this->snils = $snils;
         $this->init();

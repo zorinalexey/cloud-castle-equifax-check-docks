@@ -4,13 +4,19 @@ namespace CluodCastle\Check\Inn;
 
 final class Inn implements \CluodCastle\Check\Interfaces\VerifyInterface
 {
+    /**
+     * @var string|null
+     */
+    private ?string $inn = null;
 
     /**
-     * @inheritDoc
+     * @param string|null $number
      */
-    public function __construct(string $number)
+    public function __construct(?string $number)
     {
-        $this->inn = preg_replace('~(\D)~u', '', $number);
+        if($number){
+            $this->inn = preg_replace('~(\D)~u', '', $number);
+        }
     }
 
     /**
@@ -19,6 +25,9 @@ final class Inn implements \CluodCastle\Check\Interfaces\VerifyInterface
     public function verify(): bool
     {
         $verify = new VerifyInn($this->inn);
-        return (int)$verify->hash === (int)$verify->currentHash;
+        if($verify->hash && $verify->currentHash){
+            return (int)$verify->hash === (int)$verify->currentHash;
+        }
+        return false;
     }
 }
