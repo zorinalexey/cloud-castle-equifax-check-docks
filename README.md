@@ -8,8 +8,6 @@ composer require cloud-castle/equifax-check-docks
 
 #### -------------------------------------------------
 
-# version 2.2.1
-
 ```php
 
 <?php
